@@ -1,0 +1,15 @@
+#cloud-config
+users:
+  - name: yc-user
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtlZZnAtYUdbscDZn2pdB2vEiy4APFpOr6maHKXIGCNQpmTyt/olubb7tHuzZkdsESZ3ovgF6KiYANbmjoeknWeIfPouRQ8nAPjxXPOkhyHKyPZZY1hEH1MJVwlMxzO9KHDAsKOOjoJwodaqf8MGkhimC1STRwYbpblEP4vOCSyIRqxlP6VyZ0w72+TDrXDKuBKDFLRZ5gGp1rSwdqzFuWy+OlwJng/K8NPrlgUbb4qaQ0IRWcxTPzb+v1onQcmj/NUUIJ79FgE0nELdJL1jev/Bm42QzoBx7OVAVn1H83EBYnfHAQOd8SKqzkxOT4J7SOFOrur3MMYTlojM1Egv19AJLpmxhoBQkI3mmE+vIgftcGmSth9anoBHWFFvl8L5X/7fit1qDcCFfPXiyyy2M1E9D/S7Zipjdq/iFQuYGpiuB3X+0OIQI55rRHCSC91KrO3VaOBhtdJEyqQpwvyATTbP6gvvVmAX7oMlO/B+mPW0B+RYPL1xMpeopEjB8/c1E= appuser
+package_update: true
+packages:
+ - git
+runcmd:
+ - git clone -b monolith https://github.com/express42/reddit.git
+ - cd reddit && bundle install
+ - puma -d
