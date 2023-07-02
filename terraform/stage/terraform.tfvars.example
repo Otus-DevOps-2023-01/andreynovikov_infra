@@ -1,0 +1,8 @@
+cloud_id = "12345abcde"
+folder_id = "54321edcba"
+zone = "ru-central1-a"
+subnet_id = "5e4d3c2b1a"
+image_id = "1a2b3c4d5e"
+public_key_path = "ubuntu.pub"
+private_key_path = "ubuntu.key"
+service_account_key_file = "key.json"

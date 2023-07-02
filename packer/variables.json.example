@@ -1,7 +1,5 @@
 {
   "folder_id": "12345abcdef",
   "source_image_family": "ubuntu-1604-lts",
-  "service_account_key_file": "./key.json",
-  "image_family": "reddit-base",
   "platform_id": "standard-v1"
 }
