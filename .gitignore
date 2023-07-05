@@ -4,3 +4,7 @@ variables.json
 *.tfstate.backup
 *.tfvars
 .terraform/
+.terraform.lock.hcl
+
+vault.key
+jdauphant.nginx
