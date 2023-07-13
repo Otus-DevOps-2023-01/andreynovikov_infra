@@ -1,0 +1,8 @@
+---
+- name: Update repositories cache and install Ruby packages
+  apt:
+    pkg:
+    - ruby-full
+    - ruby-bundler
+    - build-essential
+    update_cache: yes

@@ -1,0 +1,10 @@
+- name: Update repositories cache and install MongoDB package
+  apt:
+    pkg: mongodb
+    update_cache: yes
+  tags: install
+- name: Enable MongoDB service
+  systemd:
+    name: mongodb
+    enabled: yes
+  tags: install
